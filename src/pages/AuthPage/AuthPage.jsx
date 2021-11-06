@@ -15,11 +15,9 @@ export default function AuthPage({user, setUser}) {
       
     
     return(
-        <div>
-            <div>
+            <div className="video-container">
                 <h4 style={{textDecoration:"underline"}}onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'New User? Sign up here' : 'Already have an account?'}</h4>
                 {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
             </div>
-        </div>
     )
 }

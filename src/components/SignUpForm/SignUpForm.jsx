@@ -2,7 +2,6 @@ import { Component, React } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { signUp } from '../../utilities/users-service';
-import { GoogleLogin } from 'react-google-login';
 import "./SignUpForm.css";
 
 export default class SignUpForm extends Component {
@@ -40,6 +39,7 @@ export default class SignUpForm extends Component {
       // will resolve to the user object included in the
       // payload of the JSON Web Token
       const user = await signUp(formData);
+      console.log(formData)
       // Baby step
       this.props.setUser(user);
       
@@ -64,7 +64,7 @@ export default class SignUpForm extends Component {
         <div >
             <h3>Sign-Up</h3>
             
-            <form className="form-container" autoComplete="off" onSubmit={this.handleSubmit}>
+            <form className="form-container" onSubmit={this.handleSubmit}>
                 <label className="field field_v3">
                     <input className="field__input" 
                         placeholder="e.g. DCIFan22"
