@@ -1,0 +1,31 @@
+@media screen and (max-width:600px) {
+    .main-nav h1 {
+        background-color: grey;
+        border-radius: 0.5rem;
+        color: white;
+        margin: 1.5rem 0.5rem;
+    }
+
+    .group-name {
+        padding: 0.5rem;
+        color: black;
+        text-decoration: none;
+    }
+
+    .all-groups {
+    }
+
+    .icon {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 1.5rem;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+}

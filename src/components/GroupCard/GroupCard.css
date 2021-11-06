@@ -1,0 +1,9 @@
+@media screen and (max-width:600px) {
+    .group-name {
+        padding: 0.5rem;
+        color: black;
+        text-decoration: none;
+        margin: 0 0.5rem;
+    }
+    
+}

@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px) {
+    .group-detail-page {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-container {
+    }
+}

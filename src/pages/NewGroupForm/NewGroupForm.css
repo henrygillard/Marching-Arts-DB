@@ -1,0 +1,42 @@
+@media screen and (max-width:600px) {
+    .submit-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 0 3.5rem;
+
+    }
+
+    .submit-form div {
+        margin: 0.2rem;
+        /* text-align: start; */
+        
+    }
+    .submit-form select {
+        margin: 0.2rem;
+        height: 1.5rem;
+        width: 15rem;
+        text-align: center;
+    }
+    .submit-form input {
+        margin: 0.2rem;
+        height: 1.5rem;
+        width: 15rem;
+    }
+    .submit-form button {
+        
+        height: 2rem;
+        margin: 1rem 0;
+        /* width: 15rem; */
+    }
+
+    .category-field {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: start; */
+    }
+
+
+
+}
