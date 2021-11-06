@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React from 'react';
 import "./GroupCard.css"
 
 export default function GroupCard({group, selected, idx}) {

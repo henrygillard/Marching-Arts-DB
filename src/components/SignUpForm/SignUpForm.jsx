@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, React } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { signUp } from '../../utilities/users-service';

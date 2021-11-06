@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, React } from 'react';
 import { Link } from 'react-router-dom';
 import GroupCard from '../GroupCard/GroupCard';
 import * as groupsAPI from "../../utilities/groups-api"
