@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Link, Redirect, Switch } from 'react-router-dom';
-import { useState, useEffect, useParams } from 'react';
+import { useState, React } from 'react';
 import Layout from '../../components/Layout/Layout';
 import GroupList from '../../components/GroupList/GroupList';
 import GroupDetailPage from '../GroupDetailPage/GroupDetailPage';
