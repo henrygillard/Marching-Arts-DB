@@ -35,7 +35,7 @@ app.use(function (req, res, next) {
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 
 // Put API routes here, before the "catch all" route
