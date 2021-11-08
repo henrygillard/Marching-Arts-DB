@@ -20,7 +20,25 @@ const User = require("./models/users");
             }, {
                 year: "2020",
                 videoUrl: ["https://www.youtube.com/watch?v=aR3dp_J_370&ab_channel=TheBlueDevils", "https://www.youtube.com/watch?v=ApFwMHirU6M&ab_channel=TheBlueDevils"]
-            }, 
+            }, {
+                year: "2019",
+                videoUrl: ["https://www.youtube.com/watch?app=desktop&v=Wag9VdG90yA&ab_channel=JaydenDSG"]
+            }, {
+                year: "2018",
+                videoUrl: ["https://www.youtube.com/watch?v=zlLNADGPSto&ab_channel=BenYatsko"]
+            }, {
+                year: "2017",
+                videoUrl: ["https://www.youtube.com/watch?v=FO6d8zDf1Hg&ab_channel=ThatWasLoud", "https://www.youtube.com/watch?v=F4_j5W8-L3g&ab_channel=DrumCorpsInternational"]
+            }, {
+                year: "2016",
+                videoUrl: ["https://www.youtube.com/watch?v=IT7fWXTxQ7c&ab_channel=iLikeDrumCorps"]
+            }, {
+                year: "2015",
+                videoUrl: ["https://www.youtube.com/watch?v=3qmvuf2nSbw&ab_channel=TheBlueDevils"]
+            }, {
+                year: "2014",
+                videoUrl: ["https://www.youtube.com/watch?v=-6gykBbG5Vc&ab_channel=DamienRodriguez"]
+            },
             ],
             user: users[0]
         },

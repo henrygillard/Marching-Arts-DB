@@ -19,11 +19,6 @@ password: {
     minLength: 3,
     required: true
 },
-googleId: {
-    type: String,
-    required: true
-},
-avatar: String
 }, {
 timestamps: true,
 // Even though it's hashed - don't serialize the password

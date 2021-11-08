@@ -2,14 +2,11 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-const session = require('express-session');
-const passport = require('passport');
 
 require('dotenv').config();
 
 // Connect to the database
 require('./config/database');
-require('./config/passport');
 
 const app = express();
 
@@ -18,14 +15,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(require('./config/checkToken'));
 
-app.use(session({
-  secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: true
-}));
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(function (req, res, next) {
   res.locals.user = req.user;
