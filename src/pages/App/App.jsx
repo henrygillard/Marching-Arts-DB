@@ -10,6 +10,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import YearDetailPage from '../YearDetailPage/YearDetailPage';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import NewGroupForm from '../NewGroupForm/NewGroupForm';
 
 
 
@@ -28,24 +29,38 @@ function App() {
   return (
     <Layout>
       <NavBar user={user} setUser={setUser}/>
-        <Switch>
-        <Route exact path="/groups">
       <GroupList groups={groups} 
       setGroups={setGroups} 
       selected={selected} 
       setSelected={setSelected}
       user={user}/>
-      </Route>
-      <Route exact path="/groups/:id">
-        <GroupDetailPage  setGroups={setGroups} user={user}/>
-      </Route>
-      <Route exact path="/groups/:id/:yId">
-        <YearDetailPage groups={groups} user={user} />
-      </Route>
-      <Route exact path="/login">
-        <AuthPage user={user} setUser={setUser} />
-      </Route>
-      <Redirect to ="/groups" />
+        <Switch>
+          <Route exact path="/groups">
+            
+            {/* <GroupList groups={groups} 
+            setGroups={setGroups} 
+            selected={selected} 
+            setSelected={setSelected}
+            user={user}/> */}
+          </Route>
+          <Route exact path="/groups/:id">
+          {/* <GroupList groups={groups} 
+            setGroups={setGroups} 
+            selected={selected} 
+            setSelected={setSelected}
+            user={user}/> */}
+            <GroupDetailPage  setGroups={setGroups} user={user}/>
+          </Route>
+          <Route exact path="/groups/:id/:yId">
+            <YearDetailPage groups={groups} user={user} />
+          </Route>
+          <Route exact path="/login">
+            <AuthPage user={user} setUser={setUser} />
+          </Route>
+          <Route exact path="/new-group">
+            <NewGroupForm groups={groups} setGroups={setGroups} user={user} setUser={setUser} />
+          </Route>
+          <Redirect to ="/groups" />
       </Switch>
     </Layout>
   );

@@ -9,6 +9,9 @@ export default function GroupCard({group, selected, idx}) {
         <Link to={`/groups/${group._id}`} className="links">
         {selected ? 
             <div className="group-name"
+            onClick={() => {
+                const anchor = document.querySelector('#group-detail-page')
+                anchor && anchor.scrollIntoView()}}
             style={idx % 2 ? {backgroundColor:"white"}: {backgroundColor:"#e8e4e4"} }>
                 {group.name}
             </div>

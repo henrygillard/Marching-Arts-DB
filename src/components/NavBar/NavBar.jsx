@@ -24,7 +24,7 @@ export default function NavBar({user, setUser}) {
       
     
     return(
-        <header>
+        <header id="header">
             { user ? 
             <div className="greeting">
                 <h3>Hello, {user.name}!</h3>

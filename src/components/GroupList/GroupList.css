@@ -1,3 +1,48 @@
+.main-nav h1 {
+    background-color: grey;
+    border-radius: 0.5rem;
+    color: white;
+    margin: 1.5rem 0.5rem;
+}
+
+.left-side {
+
+}
+
+.left-side-selected {
+    
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.main-nav {
+    margin: 0 0.5rem;
+    grid-area: main-nav;
+    
+}
+
+.icon {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 1.5rem;
+}
+
+.group-name {
+    padding: 0.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.group-container {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+
+}
 @media screen and (max-width:600px) {
     .main-nav h1 {
         background-color: grey;
@@ -8,6 +53,7 @@
 
     .main-nav {
         margin: 0 0.5rem;
+        
     }
 
     .group-name {

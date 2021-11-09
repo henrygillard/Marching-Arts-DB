@@ -13,7 +13,7 @@ export default class SignUpForm extends Component {
     error: ''
   };
 
-  
+ 
 
   handleChange = (evt) => {
     // Unlike setSomeState in function components which

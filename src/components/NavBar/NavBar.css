@@ -44,6 +44,7 @@ header  {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-area: header;
 
 }
 
@@ -52,4 +53,8 @@ img {
     border: solid black ;
     border-radius: 3rem;
     padding: 0.1rem;
+}
+
+.links {
+    color: white;
 }

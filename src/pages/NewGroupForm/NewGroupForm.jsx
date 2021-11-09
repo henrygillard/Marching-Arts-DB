@@ -39,10 +39,11 @@ export default function NewGroupForm({groups, setGroups, user}) {
     
     return(
         <>
-        <h1 onClick={(evt) => setSelected(prevSelected => !prevSelected)}style={{ backgroundColor: selected ? "black" : ""}}>{selected ? `- Add a Group` : `+ Add a Group`}</h1>
+        <div className="group-detail-page">
+            <h1>Add a Group</h1>
         <p className="error-message">{error}</p>
         <p className="success-message">{message}</p>
-        {selected  ? 
+        
         <form className="form-container" onSubmit={handleSubmit}>
             <label className="field field_v3">
                     <input className="field__input" 
@@ -87,8 +88,7 @@ export default function NewGroupForm({groups, setGroups, user}) {
                 </label>
             <button className="submit" type="submit">+ ADD GROUP</button>
         </form>
-        : <div>
-        </div>}
+        </div>
         </>
 
     )
