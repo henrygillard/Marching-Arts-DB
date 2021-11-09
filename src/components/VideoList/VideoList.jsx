@@ -10,7 +10,7 @@ export default function VideoList({group, year}) {
 
     return(
         
-        <div className="video-container">
+        <div className="videos-list">
             {videos}
         </div>
         
