@@ -59,65 +59,62 @@ export default class SignUpForm extends Component {
     const disable = this.state.password !== this.state.confirm;
     return (
       <div>
-        <div >
-            <h3>Sign-Up</h3>
-            
-            <form className="form-container" onSubmit={this.handleSubmit}>
-                <label className="field field_v3">
-                    <input className="field__input" 
-                        placeholder="e.g. DCIFan22"
-                        type="text" 
-                        name="name" 
-                        value={this.state.name} 
-                        onChange={this.handleChange} 
-                        required 
+        <h3>Sign-Up</h3>
+        <form className="form-container" onSubmit={this.handleSubmit}>
+            <label className="field field_v3">
+                <input className="field__input" 
+                    placeholder="e.g. DCIFan22"
+                    type="text" 
+                    name="name" 
+                    value={this.state.name} 
+                    onChange={this.handleChange} 
+                    required 
+                />
+                <span className="field__label-wrap">
+                    <span className="field__label">Username</span>
+                </span>
+            </label>
+            <label className="field field_v3">
+                <input className="field__input" 
+                    placeholder="e.g. melnik909@ya.ru"
+                    type="email" 
+                    name="email" 
+                    value={this.state.email} 
+                    onChange={this.handleChange} 
+                    required 
+                />
+                <span className="field__label-wrap">
+                    <span className="field__label">Email</span>
+                </span>
+            </label>
+            <label class="field field_v2">
+                <input class="field__input" 
+                    placeholder="e.g. Melnikov"
+                    type="password" 
+                    name="password" 
+                    value={this.state.password} 
+                    onChange={this.handleChange} 
+                    required 
                     />
-                    <span className="field__label-wrap">
-                        <span className="field__label">Username</span>
-                    </span>
-                </label>
-                <label className="field field_v3">
-                    <input className="field__input" 
-                        placeholder="e.g. melnik909@ya.ru"
-                        type="email" 
-                        name="email" 
-                        value={this.state.email} 
-                        onChange={this.handleChange} 
-                        required 
+                <span class="field__label-wrap">
+                <span class="field__label">Password</span>
+                </span>
+            </label>  
+            <label class="field field_v2">
+                <input class="field__input" 
+                    placeholder="e.g. Melnikov"
+                    type="password" 
+                    name="confirm" 
+                    value={this.state.confirm} 
+                    onChange={this.handleChange} 
+                    required 
                     />
-                    <span className="field__label-wrap">
-                        <span className="field__label">Email</span>
-                    </span>
-                </label>
-                <label class="field field_v2">
-                    <input class="field__input" 
-                        placeholder="e.g. Melnikov"
-                        type="password" 
-                        name="password" 
-                        value={this.state.password} 
-                        onChange={this.handleChange} 
-                        required 
-                        />
-                    <span class="field__label-wrap">
-                    <span class="field__label">Password</span>
-                    </span>
-                </label>  
-                <label class="field field_v2">
-                    <input class="field__input" 
-                        placeholder="e.g. Melnikov"
-                        type="password" 
-                        name="confirm" 
-                        value={this.state.confirm} 
-                        onChange={this.handleChange} 
-                        required 
-                        />
-                    <span className="field__label-wrap">
-                    <span className="field__label">Confirm</span>
-                    </span>
-                </label>  
-                <button className="submit" type="submit" disabled={disable}>SIGN UP</button>
-            </form>
-        </div>
+                <span className="field__label-wrap">
+                <span className="field__label">Confirm</span>
+                </span>
+            </label>  
+            <button className="submit" type="submit" disabled={disable}>SIGN UP</button>
+        </form>
         <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );

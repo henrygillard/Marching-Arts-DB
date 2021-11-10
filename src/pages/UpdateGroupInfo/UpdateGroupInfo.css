@@ -21,7 +21,7 @@
 .upload-button {
     border:solid;
     border-radius: 0.5rem;
-    margin: 0 4.5rem;
+    /* margin: 0 15.5rem; */
     background-color: red;
     color: white;
     padding: 0.5rem;

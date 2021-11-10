@@ -69,9 +69,10 @@ export default function CatList({groups, setGroups, user, setUser}) {
 
   
     return(
+        <>
         <div className="main-nav">
             <div className="group-container">
-                <h1 style={{ backgroundColor: allSel ? "black" : ""}}onClick={(evt) => setAllSel(prevAllSel => !prevAllSel)}>All Groups</h1>
+                <h1 style={{ backgroundColor: allSel ? "#A71803" : ""}}onClick={(evt) => setAllSel(prevAllSel => !prevAllSel)}>All Groups</h1>
                 {allSel ? 
                 <div className="all-groups">
                     <div className="search-container">
@@ -89,28 +90,30 @@ export default function CatList({groups, setGroups, user, setUser}) {
                 : <div></div>}
             </div>
             <div className="group-container">
-                <h1 onClick={(evt) => setdciSel(prevDciSel => !prevDciSel) } >DCI</h1>
+                <h1 onClick={(evt) => setdciSel(prevDciSel => !prevDciSel) } 
+                style={{ backgroundColor: dciSel ? "#A71803" : ""}}>DCI</h1>
                 <div >{dci.map((g, idx) => <GroupCard className="group-name" key={g.name} idx={idx} group={g} selected={dciSel}/>
                     )}</div>
             </div>
             
-            <h1 style={{ backgroundColor: wgiSel ? "black" : ""}}onClick={(evt) => setwgiSel(prevWgiSel => !prevWgiSel) }>WGI</h1>
+            <h1 style={{ backgroundColor: wgiSel ? "#A71803" : ""} }onClick={(evt) => setwgiSel(prevWgiSel => !prevWgiSel) }>WGI</h1>
             {wgi.map((g, idx) => <GroupCard className="wgi-groups" idx={idx} key={g.name} group={g} selected={wgiSel}/>
                 )}
-            <h1 style={{ backgroundColor: dcaSel ? "black" : ""}}onClick={(evt) => setdcaSel(prevDcaSel => !prevDcaSel) }>DCA</h1>
+            <h1 style={{ backgroundColor: dcaSel ? "#A71803" : ""}}onClick={(evt) => setdcaSel(prevDcaSel => !prevDcaSel) }>DCA</h1>
             {dca.map((g, idx) => <GroupCard className="dca-groups" idx={idx} key={g.name} group={g} selected={dcaSel}/>
                 )}
-            <h1 style={{ backgroundColor: mBandSel ? "black" : ""}}onClick={(evt) => setMBandSel(prevmBandSel => !prevmBandSel) }>Scholastic/Marching Band</h1>
+            <h1 style={{ backgroundColor: mBandSel ? "#A71803" : ""}}onClick={(evt) => setMBandSel(prevmBandSel => !prevmBandSel) }>Scholastic/Marching Band</h1>
             {mBand.map((g, idx) => <GroupCard className="marching-band-groups" idx={idx} key={g.name} group={g} selected={mBandSel}/>
                 )}
-            <h1 style={{ backgroundColor: scIndoorSel ? "black" : ""}}onClick={(evt) => setScIndoorSel(prevscIndoorSel => !prevscIndoorSel) }>Scholastic/Indoor</h1>
+            <h1 style={{ backgroundColor: scIndoorSel ? "#A71803" : ""}}onClick={(evt) => setScIndoorSel(prevscIndoorSel => !prevscIndoorSel) }>Scholastic/Indoor</h1>
             {scIndoor.map((g, idx) => <GroupCard className="scholastic-indoor-groups" idx={idx} key={g.name} group={g} selected={scIndoorSel}/>
                 )}
-            <Link to="/new-group"><h1 onClick={scrollView}>Add a Group</h1></Link>
+            <Link className="link" to="/new-group"><h1 onClick={scrollView}> + Add a Group</h1></Link>
             
 
                 
         </div>
+        </>
         )
 
     }

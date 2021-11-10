@@ -1,7 +1,8 @@
 main {
     text-align: center;
     display: grid;
-    width: 100%;
+    width: 1100px;
+    margin: 0 auto;
     /* align-items: center; */
     grid-template-columns: 20rem 1fr;
     grid-template-rows: 20rem 1fr;
@@ -50,9 +51,7 @@ h1 {
 .form-container {
     box-sizing: border-box;
     width: 100%;
-    max-width: 480px;
-    margin: auto;
-    padding: 0.5rem;
+    padding: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -269,7 +268,6 @@ select {
     };
 
     .react-player {
-        width: 50%;
     }
 
     .link {
@@ -302,15 +300,18 @@ select {
         .form-container {
             box-sizing: border-box;
             width: 100%;
-            max-width: 480px;
-            margin: auto;
-            padding: 0.5rem;
     
             display: flex;
             flex-direction: column;
             /* justify-content: center; */
             /* align-items: center; */
             grid-gap: 30px;
+        }
+
+        .login-container {
+          margin: 0;
+          width: 100%;
+          margin-left: 0.25rem;
         }
     
         .field__input{ 

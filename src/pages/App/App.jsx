@@ -11,6 +11,7 @@ import YearDetailPage from '../YearDetailPage/YearDetailPage';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewGroupForm from '../NewGroupForm/NewGroupForm';
+import Home from '../Home/Home';
 
 
 
@@ -36,7 +37,7 @@ function App() {
       user={user}/>
         <Switch>
           <Route exact path="/groups">
-            
+            <Home />
             {/* <GroupList groups={groups} 
             setGroups={setGroups} 
             selected={selected} 
