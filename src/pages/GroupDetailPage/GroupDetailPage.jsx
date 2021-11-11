@@ -38,7 +38,7 @@ export default function GroupDetailPage({setGroups, user}) {
             <h3>Created by {thisGroup && thisGroup.user.name}</h3>
             <h3>Circuit : {thisGroup && thisGroup.category}</h3>
             <div className="video-container">
-            <ReactPlayer  className='react-player' style={{width:"100px", height:"100%"}}url={thisGroup && thisGroup.videoUrl}></ReactPlayer>
+            <ReactPlayer  className='react-player' width="100%" height="100%" url={thisGroup && thisGroup.videoUrl}></ReactPlayer>
             </div>
             <UpdateGroupInfo group={thisGroup} setGroup={setThisGroup} user={user}/>
             <h3>Years</h3>
