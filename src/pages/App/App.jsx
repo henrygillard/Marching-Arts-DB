@@ -12,6 +12,7 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewGroupForm from '../NewGroupForm/NewGroupForm';
 import Home from '../Home/Home';
+import UserProfile from '../UserProfile/UserProfile';
 
 
 
@@ -60,6 +61,9 @@ function App() {
           </Route>
           <Route exact path="/new-group">
             <NewGroupForm groups={groups} setGroups={setGroups} user={user} setUser={setUser} />
+          </Route>
+          <Route exact path="/profile/:id">
+            <UserProfile user={user} setGroups={setGroups} groups={groups} />
           </Route>
           <Redirect to ="/groups" />
       </Switch>

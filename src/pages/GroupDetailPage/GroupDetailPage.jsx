@@ -20,6 +20,7 @@ export default function GroupDetailPage({setGroups, user}) {
     let { id } = useParams();
 
     const [thisGroup, setThisGroup] = useState()
+   
 
     useEffect(function () {
         async function getGroup() {

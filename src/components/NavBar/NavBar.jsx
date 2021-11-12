@@ -28,7 +28,7 @@ export default function NavBar({user, setUser}) {
             { user ? 
             <div className="greeting">
                 <h3>Hello, {user.name}!</h3>
-                
+                <div><Link className="links" to={`/profile/${user._id}`}>Profile</Link></div>
                 <div onClick={handleLogOut}><Link to="/" className="links">Log Out</Link></div>
             </div>
             : 

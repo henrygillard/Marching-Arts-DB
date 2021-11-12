@@ -7,7 +7,9 @@ import "./UpdateGroupInfo.css"
 export default function UpdateGroupInfo({group, setGroup, user}) {
     const {id} = useParams();
     const initData = {
+      id,
       group
+
     };
 
     const [groupData, setGroupData] = useState(
@@ -34,7 +36,8 @@ export default function UpdateGroupInfo({group, setGroup, user}) {
     function handleChange(evt) {
         const newGroupData= { ...groupData, [evt.target.name]: evt.target.value };
         setGroupData(newGroupData);
-        setError("")
+        setError("");
+        setMessage("");
       }
 
     async function handleSubmit(evt) {
@@ -50,6 +53,7 @@ export default function UpdateGroupInfo({group, setGroup, user}) {
         } else {
             setError("Please log in to upload videos")
         }
+
     }
     
     return(

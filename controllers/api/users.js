@@ -5,8 +5,16 @@ const User = require('../../models/users');
 module.exports = {
   create,
   login,
-  checkToken
+  checkToken,
+  detail
 };
+
+async function detail(req, res) {
+  const user = await User.findById(req.params.id)
+    .populate("groups")
+    .exec();
+  res.json(user);
+}
 
 async function login(req, res) {
   try {
@@ -23,12 +31,14 @@ async function login(req, res) {
 async function create(req, res) {
   try {
     // Add the user to the database
+    // req.user.groups = {};
     const user = await User.create(req.body);
     // token will be a string
     const token = createJWT(user);
     // Yes, we can use res.json to send back just a string
     // The client code take this into consideration
     res.json(token);
+    console.log(req.user)
   } catch (err) {
     // Client will check for non-2xx status code 
     // 400 = Bad Request

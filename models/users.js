@@ -19,6 +19,7 @@ password: {
     minLength: 3,
     required: true
 },
+groups: {type: Schema.Types.ObjectId, ref: "Group" }
 }, {
 timestamps: true,
 // Even though it's hashed - don't serialize the password
@@ -27,7 +28,7 @@ toJSON: {
     delete ret.password;
     return ret;
     }
-}
+},
 });
 
 userSchema.pre('save', function(next) {

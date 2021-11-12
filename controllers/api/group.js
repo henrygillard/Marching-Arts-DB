@@ -1,4 +1,5 @@
 const Group = require("../../models/group")
+const User = require("../../models/users")
 
 module.exports = {
     index,
@@ -27,14 +28,16 @@ async function create(req, res) {
       res.json(newGroup)
     } else {
       req.body.user = req.user._id;
+      // req.user.groups = req.body
       const newGroup = await Group.create(req.body);
-      console.log(newGroup);
+      req.user.groups = req.body
       console.log(req.user)
+      // console.log(newGroup);
+      // console.log(req.user)
       res.json(newGroup)
-  }
+    }
     } catch {
       console.log(req.body)
-      console.log(req.user)
       res.status(400).json('Bad Credentials');
       console.log("catch")
     }

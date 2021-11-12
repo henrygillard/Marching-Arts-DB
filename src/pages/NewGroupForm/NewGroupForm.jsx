@@ -18,6 +18,7 @@ export default function NewGroupForm({groups, setGroups, user}) {
         const newGroupData= { ...groupData, [evt.target.name]: evt.target.value };
         setGroupData(newGroupData);
         setError("");
+        setMessage("");
       }
 
     async function handleSubmit(evt) {
@@ -86,6 +87,7 @@ export default function NewGroupForm({groups, setGroups, user}) {
                         <span className="field__label">Video URL</span>
                     </span>
                 </label>
+                <p style={{fontStyle:"italic"}}>*This will be the main video that will display on the group's main page</p>
             <button className="submit" type="submit">+ ADD GROUP</button>
         </form>
         </div>
