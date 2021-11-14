@@ -34,8 +34,9 @@ export default function GroupDetailPage({setGroups, user}) {
     // const years = thisGroup.years.map(y => <YearCard key={y.year} year={y} group={thisGroup}/>)
     
     return(
+        <>
         <div className="group-detail-page" id="group-detail-page">
-            <h1 className="group-header"> {thisGroup && thisGroup.name}</h1>
+        <h1 className="group-header"> {thisGroup && thisGroup.name}</h1>
             <h3>Created by {thisGroup && thisGroup.user.name}</h3>
             <h3>Circuit : {thisGroup && thisGroup.category}</h3>
             <div className="video-container">
@@ -48,5 +49,6 @@ export default function GroupDetailPage({setGroups, user}) {
             </div>
             
         </div>
+        </>
     )
 }
