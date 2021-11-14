@@ -35,15 +35,17 @@ export default function GroupDetailPage({setGroups, user}) {
     
     return(
         <div className="group-detail-page" id="group-detail-page">
-            <h1> {thisGroup && thisGroup.name}</h1>
+            <h1 className="group-header"> {thisGroup && thisGroup.name}</h1>
             <h3>Created by {thisGroup && thisGroup.user.name}</h3>
             <h3>Circuit : {thisGroup && thisGroup.category}</h3>
             <div className="video-container">
-            <ReactPlayer  className='react-player' width="100%" height="100%" url={thisGroup && thisGroup.videoUrl}></ReactPlayer>
+                <ReactPlayer  className='react-player' width="100%" height="100%" url={thisGroup && thisGroup.videoUrl}></ReactPlayer>
             </div>
             <UpdateGroupInfo group={thisGroup} setGroup={setThisGroup} user={user}/>
             <h3>Years</h3>
-            { thisGroup && thisGroup.years.map((y)  => <YearCard key={y.year} year={y} group={thisGroup}/>)}
+            <div className="years-container">
+                { thisGroup && thisGroup.years.map((y, idx)  => <YearCard key={y.year} year={y} idx={idx} group={thisGroup}/>)}
+            </div>
             
         </div>
     )

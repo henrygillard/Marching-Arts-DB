@@ -58,7 +58,7 @@ export default function UpdateGroupInfo({group, setGroup, user}) {
     
     return(
         <>
-        <button style={{ backgroundColor: selected ? "#ab0101" : ""}}className="upload-button" onClick={(evt) => setSelected(prevSelected => !prevSelected)}>Upload a New Video for {group && group.name}</button>
+        <button style={{ backgroundColor: selected ? "#ab0101" : ""}} className="upload-button" onClick={(evt) => setSelected(prevSelected => !prevSelected)}>Upload a New Video for {group && group.name}</button>
         {selected ? 
         <form className="form-container" onSubmit={handleSubmit}>
             <label className="field field_v3">

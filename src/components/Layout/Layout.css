@@ -6,7 +6,6 @@ main {
     /* align-items: center; */
     grid-template-columns: 20rem 1fr;
     grid-template-rows: 20rem 1fr;
-    grid-gap: 1rem;
     grid-template-areas: 
       "header header"
       "main-nav group-detail-page";
@@ -254,13 +253,11 @@ select {
     display: grid;
     width: 100%;
     /* align-items: center; */
-    grid-template-columns: 25rem 1fr;
-    grid-template-rows: 20rem 1fr;
-    grid-gap: 1rem;
+    grid-template-columns: 100%;
     grid-template-areas: 
-      "header header"
-      "group-detail-page group-detail-page"
-      "main-nav main-nav";
+      "header "
+      "group-detail-page "
+      "main-nav ";
     
 }
     h1 {
