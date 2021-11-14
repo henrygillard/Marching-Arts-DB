@@ -33,6 +33,12 @@
 
     .links {
         color: white;
+        text-decoration: none;
+    }
+
+    .link {
+        color: white;
+        text-decoration: none;
     }
 }
 

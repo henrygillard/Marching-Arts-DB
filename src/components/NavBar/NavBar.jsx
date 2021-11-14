@@ -28,7 +28,7 @@ export default function NavBar({user, setUser}) {
             { user ? 
             <div className="greeting">
                 <h3>Hello, {user.name}!</h3>
-                <div><Link className="links" to={`/profile/${user._id}`}>Profile</Link></div>
+                <div className="links"><Link className="links" to={`/profile/${user._id}`}>Profile</Link></div>
                 <div onClick={handleLogOut}><Link to="/" className="links">Log Out</Link></div>
             </div>
             : 
@@ -38,7 +38,7 @@ export default function NavBar({user, setUser}) {
             }
             <h1>Marching Arts Database</h1>
             <img src="https://i.imgur.com/lm5NWj5.png" />
-            <Link className="link" to="/groups"><h3>Home</h3></Link>
+            <Link className="links" to="/groups"><h3>Home</h3></Link>
         </header>
     )
 }
