@@ -13,6 +13,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewGroupForm from '../NewGroupForm/NewGroupForm';
 import Home from '../Home/Home';
 import UserProfile from '../UserProfile/UserProfile';
+import Footer from '../../components/Footer/Footer';
 
 
 
@@ -67,6 +68,7 @@ function App() {
           </Route>
           <Redirect to ="/groups" />
       </Switch>
+      <Footer/>
     </Layout>
   );
 }

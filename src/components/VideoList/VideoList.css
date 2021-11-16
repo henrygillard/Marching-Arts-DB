@@ -6,4 +6,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    margin: 1rem;
+}
+
+.video-list {
+    display: flex;
+}
+
+.videos-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 1rem;
+    margin: 1rem;
 }
