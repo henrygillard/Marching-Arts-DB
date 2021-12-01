@@ -23,7 +23,7 @@ export default function CatList({groups, setGroups, user, setUser}) {
       const [dciSel, setdciSel] = useState(false)
       const [wgiSel, setwgiSel] = useState(false)
       const [dcaSel, setdcaSel] = useState(false)
-      const [allSel, setAllSel] = useState(false)
+      const [allSel, setAllSel] = useState(true)
       const [mBandSel, setMBandSel] = useState(false)
       const [scIndoorSel, setScIndoorSel] = useState(false)
       const [searchField, setSearchField] = useState("");
