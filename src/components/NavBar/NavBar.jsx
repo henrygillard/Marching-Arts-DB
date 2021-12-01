@@ -17,7 +17,14 @@ export default function NavBar({user, setUser}) {
         userService.logOut();
         // Update state will cause a re-render
         setUser(null);
+
+        
     }
+
+    function scrollView() {
+        const anchor = document.querySelector('#group-detail-page')
+        anchor && anchor.scrollIntoView()
+      }
 
     
 
@@ -33,7 +40,7 @@ export default function NavBar({user, setUser}) {
             </div>
             : 
             <div>
-                <Link className="links" to="/login">Sign Up/Log In</Link> 
+                <Link className="links" to="/login" onClick={scrollView}>Sign Up/Log In</Link> 
             </div>
             }
             <h1>Marching Arts Database</h1>

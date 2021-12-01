@@ -255,13 +255,9 @@ select {
 
   main {
     text-align: center;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-      "header "
-      "group-detail-page"
-      "main-nav ";
+    flex-direction: column;
+    display: flex;
+    width: 100vw;
 }
     h1 {
         font-size: 2rem;
