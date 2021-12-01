@@ -1,9 +1,12 @@
 main {
     text-align: center;
+    border-left: solid white;
+    border-right: solid white;
+    background-color: white;
     display: grid;
     width: 1100px;
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
     /* align-items: center; */
     grid-template-columns: 20rem 1fr;
     grid-template-rows: 20rem 1fr;
@@ -254,13 +257,11 @@ select {
     text-align: center;
     display: grid;
     width: 100%;
-    /* align-items: center; */
     grid-template-columns: 100%;
     grid-template-areas: 
       "header "
-      "group-detail-page "
+      "group-detail-page"
       "main-nav ";
-    
 }
     h1 {
         font-size: 2rem;

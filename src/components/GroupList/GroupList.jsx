@@ -70,7 +70,7 @@ export default function CatList({groups, setGroups, user, setUser}) {
   
     return(
         <>
-        <div className="main-nav">
+        <div className="main-nav" id="main-nav">
             <div className="group-container">
                 <h1 style={{ backgroundColor: allSel ? "#A71803" : ""}}onClick={(evt) => setAllSel(prevAllSel => !prevAllSel)}>All Groups</h1>
                 {allSel ? 
